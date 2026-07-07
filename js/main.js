@@ -2,16 +2,16 @@ const supportedLanguages = ["ar", "en"];
 
 const translations = {
     ar: {
-        logo: "فعال | Fa3aal",
+        logo: "فعّال | Fa3aal",
         heroTitleLine1: "إجعل شركتك أقرب إلى عملائك",
-        heroDescription: "في 'فعال' نبني لك حضورًا رقميًا متكاملًا يساعدك على عرض خدماتك، تعزيز ثقة العملاء، وتنمية أعمالك.",
+        heroDescription: "في 'فعّال' نبني لك حضورًا رقميًا متكاملًا يساعدك على عرض خدماتك، تعزيز ثقة العملاء، وتنمية أعمالك.",
         heroTitleLine2: "جرّب منصتك الرقمية مجانًا لمدة 30 يومًا وابدأ رحلتك نحو عالم الأعمال الرقمي.",
         ctaText: "ابدأ تجربة الـ 30 يوماً مجاناً",
         themeButton: {
             dark: "☀️ الوضع المضيء",
             light: "🌙 الوضع المعتم"
         },
-        langButton: "English",
+        langButton: "العربية",
         modalTitle: "طلب تجربة 30 يوم",
         modalDescription: "يرجى إدخال بياناتك بدقة وسنتواصل معك قريبًا.",
         nameLabel: "الاسم الكامل",
@@ -27,8 +27,8 @@ const translations = {
         cancelButton: "إلغاء",
         wordsafe: "أمن",
         wordpractic: "عملي",
-        wordactive: "فعال",
-        featuresTitle: "لماذا تختار فعال؟",
+        wordactive: "فعّال",
+        featuresTitle: "لماذا تختار فعّال؟",
         feature1Title: "هوية احترافية",
         feature1Desc: "نصمم لك هوية بصرية قوية تعكس قيم علامتك التجارية.",
         feature2Title: "موقع سريع",
@@ -39,7 +39,7 @@ const translations = {
         submitButton: "إرسال الطلب"
     },
     en: {
-        logo: "Fa3aal | فعال",
+        logo: "Fa3aal | فعّال",
         heroTitleLine1: "Bring Your Business Closer to Your Customers",
         heroTitleLine2: "Try your digital platform free for 30 days and start your journey into the digital business world.",
         heroDescription: "At \"Fa3aal\", we build a complete digital presence for your business, helping you showcase your services, build customer trust, and grow your business.",
@@ -48,7 +48,7 @@ const translations = {
             dark: "☀️ Light mode",
             light: "🌙 Dark mode"
         },
-        langButton: "العربية",
+        langButton: "English",
         modalTitle: "Request a 30-Day Trial",
         modalDescription: "Please fill out the form below and we will contact you shortly.",
         nameLabel: "Full Name",
@@ -64,7 +64,7 @@ const translations = {
         cancelButton: "Cancel",
         wordsafe: "Safe",
         wordpractic: "Practical",
-        wordactive: "Active",
+        wordactive: "effective",
         featuresTitle: "Why choose Fa3aal?",
         feature1Title: "Professional Identity",
         feature1Desc: "We design a strong visual identity that reflects your brand values.",

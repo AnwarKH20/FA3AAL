@@ -25,6 +25,17 @@ const translations = {
         emailPlaceholder: "example@email.com",
         descriptionPlaceholder: "اكتب وصفًا مختصرًا عن مشروعك",
         cancelButton: "إلغاء",
+        wordsafe: "أمن",
+        wordpractic: "عملي",
+        wordactive: "فعال",
+        featuresTitle: "لماذا تختار فعال؟",
+        feature1Title: "هوية احترافية",
+        feature1Desc: "نصمم لك هوية بصرية قوية تعكس قيم علامتك التجارية.",
+        feature2Title: "موقع سريع",
+        feature2Desc: "نوفر موقعًا سريعًا ومجهزًا لعرض خدماتك بوضوح.",
+        feature3Title: "أدوات جاهزة",
+        feature3Desc: "نضيف لك أدوات تسهّل التواصل مع العملاء وتحسين التجربة.",
+        footerText: "© 2026 جميع الحقوق محفوظة | Fa3aal",
         submitButton: "إرسال الطلب"
     },
     en: {
@@ -51,6 +62,17 @@ const translations = {
         emailPlaceholder: "example@email.com",
         descriptionPlaceholder: "Write a short description of your project",
         cancelButton: "Cancel",
+        wordsafe: "Safe",
+        wordpractic: "Practical",
+        wordactive: "Active",
+        featuresTitle: "Why choose Fa3aal?",
+        feature1Title: "Professional Identity",
+        feature1Desc: "We design a strong visual identity that reflects your brand values.",
+        feature2Title: "Fast Website",
+        feature2Desc: "We provide a fast website designed to clearly present your services.",
+        feature3Title: "Ready-made Tools",
+        feature3Desc: "We add tools that make communication with customers easier and improve the experience.",
+        footerText: "© 2026 All rights reserved | Fa3aal",
         submitButton: "Submit Request"
     }
 };
@@ -122,6 +144,13 @@ function updateUi() {
     if (trialDescription) trialDescription.placeholder = t.descriptionPlaceholder;
     if (cancelBtn) cancelBtn.textContent = t.cancelButton;
     if (submitBtn) submitBtn.textContent = t.submitButton;
+
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (key && t[key]) {
+            element.textContent = t[key];
+        }
+    });
 
     document.documentElement.setAttribute("data-theme", currentTheme);
     document.documentElement.setAttribute("data-lang", currentLang);
@@ -212,25 +241,26 @@ async function submitTrialForm(event) {
     const form = document.getElementById("trialForm");
     if (!form) return;
 
-    const formData = new FormData(form);
-    formData.set("name", name);
-    formData.set("phone", phone);
-    formData.set("whatsapp", whatsapp);
-    formData.set("email", email);
-    formData.set("description", description);
+    const payload = new URLSearchParams();
+    payload.set("name", name);
+    payload.set("phone", phone);
+    payload.set("whatsapp", whatsapp);
+    payload.set("email", email);
+    payload.set("description", description);
 
     try {
         setTrialMessage("جاري إرسال الطلب...");
 
         const response = await fetch(form.action, {
             method: "POST",
-            body: formData,
+            body: payload.toString(),
             headers: {
-                "Accept": "application/json"
+                "Accept": "application/json",
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
             }
         });
 
-        if (response.ok) {
+        if (response.ok || response.status === 200 || response.status === 201) {
             setTrialMessage("تم استلام طلبك بنجاح، وسنواصل معك قريبًا.");
             form.reset();
         } else {

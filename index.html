@@ -46,26 +46,26 @@
     <section class="brand-animation" aria-label="مشهد علامة تجارية">
 
     <div class="word-container">
-        <div class="word">أمن</div>
-        <div class="word">عملي</div>
-        <div class="word">فعال</div>
+        <div class="word wordsafe" data-i18n="wordsafe">أمن</div>
+        <div class="word wordpractic" data-i18n="wordpractic">عملي</div>
+        <div class="word wordactive" data-i18n="wordactive">فعال</div>
     </div>
     </section>
 
     <section class="features reveal">
-        <h2>لماذا تختار فعال؟</h2>
+        <h2 data-i18n="featuresTitle">لماذا تختار فعال؟</h2>
         <div class="features-grid">
             <div class="card reveal reveal-delay-1">
-                <h3>هوية احترافية</h3>
-                <p>نصمم لك هوية بصرية قوية تعكس قيم علامتك التجارية.</p>
+                <h3 data-i18n="feature1Title">هوية احترافية</h3>
+                <p data-i18n="feature1Desc">نصمم لك هوية بصرية قوية تعكس قيم علامتك التجارية.</p>
             </div>
             <div class="card reveal reveal-delay-2">
-                <h3>موقع سريع</h3>
-                <p>نوفر موقعًا سريعًا ومجهزًا لعرض خدماتك بوضوح.</p>
+                <h3 data-i18n="feature2Title">موقع سريع</h3>
+                <p data-i18n="feature2Desc">نوفر موقعًا سريعًا ومجهزًا لعرض خدماتك بوضوح.</p>
             </div>
             <div class="card reveal reveal-delay-3">
-                <h3>أدوات جاهزة</h3>
-                <p>نضيف لك أدوات تسهّل التواصل مع العملاء وتحسين التجربة.</p>
+                <h3 data-i18n="feature3Title">أدوات جاهزة</h3>
+                <p data-i18n="feature3Desc">نضيف لك أدوات تسهّل التواصل مع العملاء وتحسين التجربة.</p>
             </div>
         </div>
     </section>
@@ -76,33 +76,33 @@
             <h3 id="modalTitle" class="modaltitle">طلب تجربة 30 يوم</h3>
             <p id="modalDescription" class="modaldescription">يرجى إدخال بياناتك بدقة وسنواصل معك قريبًا.</p>
 
-            <form id="trialForm" onsubmit="submitTrialForm(event)" action="https://formspree.io/f/xkgzgdgj" method="POST">
+            <form id="trialForm" onsubmit="submitTrialForm(event)" action="https://formspree.io/f/mrewvpoa" method="POST">
                 <label class="form-group">
                     <span id="nameLabel" class="formlabelname">الاسم الكامل</span>
-                    <input type="text" id="trialName" required placeholder="اكتب اسمك الكامل">
+                    <input type="text" id="trialName" name="name" required placeholder="اكتب اسمك الكامل">
                 </label>
 
                 <label class="form-group">
                     <span id="phoneLabel" class="formlabelphone">رقم الهاتف</span>
-                    <input type="tel" id="trialPhone" required placeholder="مثال: 0599123456">
+                    <input type="tel" id="trialPhone" name="phone" required placeholder="مثال: 0599123456">
                 </label>
 
                 <label class="form-group">
                     <span id="whatsappLabel" class="formlabelwhatsapp">رقم واتساب</span>
                     <div class="input-with-icon">
                         <span class="input-icon">💬</span>
-                        <input type="tel" id="trialWhatsapp" required placeholder="أدخل رقم واتساب">
+                        <input type="tel" id="trialWhatsapp" name="whatsapp" required placeholder="أدخل رقم واتساب">
                     </div>
                 </label>
 
                 <label class="form-group">
                     <span id="emailLabel" class="formlabelemail">البريد الإلكتروني</span>
-                    <input type="email" id="trialEmail" required placeholder="example@email.com">
+                    <input type="email" id="trialEmail" name="email" required placeholder="example@email.com">
                 </label>
 
                 <label class="form-group">
                     <span id="descriptionLabel" class="formlabeldescription">وصف مختصر للمشروع</span>
-                    <textarea id="trialDescription" rows="4" required placeholder="اكتب وصفًا مختصرًا عن مشروعك"></textarea>
+                    <textarea id="trialDescription" name="description" rows="4" required placeholder="اكتب وصفًا مختصرًا عن مشروعك"></textarea>
                 </label>
 
                 <div class="modal-actions">
@@ -119,7 +119,7 @@
         <div class="footer-logo">
             <img src="icons/‏‏logo-white.png" alt="Fa3aal Logo" class="logo-box footer-logo-box">
         </div>
-        <p>© 2026 جميع الحقوق محفوظة | Fa3aal</p>
+        <p data-i18n="footerText">© 2026 جميع الحقوق محفوظة | Fa3aal</p>
     </footer>
 
 </body>

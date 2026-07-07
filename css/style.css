@@ -315,6 +315,13 @@
         .modal-overlay.active {
             display: flex;
         }
+        .fgimg{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
 
         .trial-modal {
             width: 100%;

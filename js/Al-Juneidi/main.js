@@ -1,21 +1,23 @@
 
-function scrollTocontainer() {
-document.getElementsByClassName("container")[0].scrollIntoView({
-    behavior: "smooth"
-});
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 }
-function scrollToproducts_section() {
-document.getElementsByClassName("products-section")[0].scrollIntoView({
-    behavior: "smooth"
-});
+
+function scrollToHome() {
+    scrollToSection("home");
 }
-function scrollToabout_section() {
-document.getElementsByClassName("about-section")[0].scrollIntoView({
-    behavior: "smooth"
-});
+
+function scrollToAbout() {
+    scrollToSection("about");
 }
+
+function scrollToProducts() {
+    scrollToSection("products");
+}
+
 function scrollToContact() {
-document.getElementsByClassName("contact")[0].scrollIntoView({
-    behavior: "smooth"
-});
+    scrollToSection("contact");
 }

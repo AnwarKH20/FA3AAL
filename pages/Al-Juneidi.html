@@ -21,82 +21,27 @@
             <div class="container">
                 <nav>
                     <img src="../images/Al-Juneidi/logo.jpg" alt="AL JUNEIDI Logo" class="logo-boxx">
-                <div class="logo">AL JUNEIDI</div>
+                    <div class="logo">AL JUNEIDI</div>
                     <ul>
-                        <li><a href="#" onclick="scrollTocontainer()">الرئيسية</a></li>
-                        <li><a href="#" onclick="scrollToabout_section()">من نحن</a></li>
-                        <li><a href="#" onclick="scrollToproducts_section()">المنتجات</a></li>
-                        <li><a href="#" onclick="scrollTocontact()">تواصل معنا</a></li>
+                        <li><a href="#" onclick="scrollToHome()">الرئيسية</a></li>
+                        <li><a href="#" onclick="scrollToAbout()">من نحن</a></li>
+                        <li><a href="#" onclick="scrollToProducts()">المنتجات</a></li>
+                        <li><a href="#" onclick="scrollToContact()">تواصل معنا</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section class="gap">
-            
-        </section>
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="title">تواصل معنا</h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="icon">📞</div>
-                        <h3>الهاتف</h3>
-                        <p><a href="tel:1700200200">1700 200 200</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="icon">✉️</div>
-                        <h3>البريد الإلكتروني</h3>
-                        <p><a href="mailto:info@aljuneidi.com">info@aljuneidi.com</a></p>
-                    </div>
-                    <div class="contact-card">
-                            <a href="https://www.facebook.com/aljuneididairy" target="_blank">
-
-                        <div class="icon">
-                        <img class="logo-boxx" src="../icons/Facebook_icon.webp" alt="فيسبوك">
-                        </div>
-                        <h3>فيسبوك</h3>
-                        <p>
-                                facebook.com/aljuneididairy
-                            </a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                            <a href="https://www.instagram.com/aljuneidi.co" target="_blank">
-
-                        <div class="icon">
-                        <img class="logo-boxx" src="../icons/Instagram_icon.png" alt="إنستغرام">
-                        </div>
-                        <h3>إنستغرام</h3>
-                        <p>
-                                @aljuneidi.co
-                            </a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                            <a href="https://www.youtube.com/@aljuneidico" target="_blank">
-                        <div class="icon">
-                        <img class="logo-boxx" src="../icons/YouTube.svg.webp" alt="يوتيوب">
-                        </div>
-                        <h3>يوتيوب</h3>
-                        <p>
-                                @aljuneidico
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="hero">
+        <section class="hero" id="home">
             <div>
                 <h1>طعم الجودة... منذ أكثر من 40 عاماً</h1>
                 <p>
                 شركة الجنيدي من الشركات الرائدة في صناعة الألبان والمواد الغذائية،
                 وتسعى دائماً لتقديم منتجات عالية الجودة لكل أفراد الأسرة.
                 </p>
-                <a class="btn" onclick="scrollToproducts_section()">استعرض المنتجات</a>
+                <a class="btn" onclick="scrollToProducts(); return false;">استعرض المنتجات</a>
             </div>
         </section>
-        <section>
+        <section id="about">
             <div class="container about-section">
             <h2 class="title">من نحن</h2>
                 <div class="about">
@@ -108,7 +53,7 @@
                 </div>
             </div>
         </section>
-        <section style="background:white">
+        <section id="products" style="background:white">
             <div class="container products-section">
             <h2 class="title">منتجاتنا</h2>
                 <div class="cards">
@@ -149,6 +94,50 @@
                     <div class="stat">
                         <h2>24/7</h2>
                         <p>خدمة العملاء</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="title">تواصل معنا</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="icon">📞</div>
+                        <h3>الهاتف</h3>
+                        <p><a href="tel:1700200200">1700 200 200</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="icon">✉️</div>
+                        <h3>البريد الإلكتروني</h3>
+                        <p><a href="mailto:info@aljuneidi.com">info@aljuneidi.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <a href="https://www.facebook.com/aljuneididairy" target="_blank">
+                            <div class="icon">
+                                <img class="logo-boxx" src="../icons/Facebook_icon.webp" alt="فيسبوك">
+                            </div>
+                            <h3>فيسبوك</h3>
+                            <p>facebook.com/aljuneididairy</p>
+                        </a>
+                    </div>
+                    <div class="contact-card">
+                        <a href="https://www.instagram.com/aljuneidi.co" target="_blank">
+                            <div class="icon">
+                                <img class="logo-boxx" src="../icons/Instagram_icon.png" alt="إنستغرام">
+                            </div>
+                            <h3>إنستغرام</h3>
+                            <p>@aljuneidi.co</p>
+                        </a>
+                    </div>
+                    <div class="contact-card">
+                        <a href="https://www.youtube.com/@aljuneidico" target="_blank">
+                            <div class="icon">
+                                <img class="logo-boxx" src="../icons/YouTube.svg.webp" alt="يوتيوب">
+                            </div>
+                            <h3>يوتيوب</h3>
+                            <p>@aljuneidico</p>
+                        </a>
                     </div>
                 </div>
             </div>
